@@ -2,8 +2,9 @@ import java.util.Scanner;
 
 public class EditString {
     public static void main(String[] args) {
+        String normalString = "Всем привет! Пусть день пройдет прекрасно!";
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите фразу \"Всем привет! Пусть день пройдет прекрасно!\": ");
+        System.out.println("Введите фразу: " + normalString);
         String enterString = sc.nextLine();
         System.out.println("Длина введенной Вами строки: " + enterString.length() + " символов");
 
@@ -15,15 +16,15 @@ public class EditString {
 
         System.out.println("Первый введенный вами символ: " + enterString.charAt(0));
 
-        String normalString = "Всем привет! Пусть день пройдет прекрасно!";
+
         if (enterString.equals(normalString)) {
-            System.out.println("Введенный вами текст: \"Всем привет! Пусть день пройдет прекрасно!\"");
+            System.out.println("Введенный вами текст: " + normalString);
         } else {
             System.out.println("Вы ввели неизвестный текст");
         }
 
-        if (enterString.equalsIgnoreCase("Всем привет! Пусть день пройдет прекрасно!")){
-            System.out.println("Введенный вами текст: \"Всем привет! Пусть день пройдет прекрасно!\"");
+        if (enterString.equalsIgnoreCase(normalString)) {
+            System.out.println("Введенный вами текст: " + normalString);
         }
 
         System.out.println ("Введенная вами строка начинается со слова \"Всем\": " + enterString.startsWith("Всем"));
